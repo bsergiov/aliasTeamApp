@@ -11,6 +11,7 @@
 		CC5089FC27C65B1500FCB8B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FB27C65B1500FCB8B5 /* NetworkManager.swift */; };
 		CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */; };
 		CC508A0027C65B4500FCB8B5 /* CardGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FF27C65B4500FCB8B5 /* CardGameModel.swift */; };
+		CC508A0927C6BBAB00FCB8B5 /* RullesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC508A0827C6BBAB00FCB8B5 /* RullesViewController.swift */; };
 		CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88B8DC27C6149C00858B11 /* AppDelegate.swift */; };
 		CC88B8DF27C6149C00858B11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88B8DE27C6149C00858B11 /* SceneDelegate.swift */; };
 		CC88B8E127C6149C00858B11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88B8E027C6149C00858B11 /* MainViewController.swift */; };
@@ -26,6 +27,7 @@
 		CC5089FB27C65B1500FCB8B5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		CC5089FF27C65B4500FCB8B5 /* CardGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameModel.swift; sourceTree = "<group>"; };
+		CC508A0827C6BBAB00FCB8B5 /* RullesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RullesViewController.swift; sourceTree = "<group>"; };
 		CC88B8D927C6149C00858B11 /* aliasTeamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aliasTeamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC88B8DC27C6149C00858B11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC88B8DE27C6149C00858B11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +72,8 @@
 			children = (
 				CC88B8F327C6156500858B11 /* Controllers */,
 				CC88B8F127C6151600858B11 /* Storyboards */,
-				CC88B8F527C6158B00858B11 /* Services */,
 				CC88B8F427C6157A00858B11 /* Models */,
+				CC88B8F527C6158B00858B11 /* Services */,
 				CC88B8F027C614C700858B11 /* SupportFiles */,
 				CC88B8F227C6154400858B11 /* Resources */,
 			);
@@ -112,6 +114,7 @@
 			children = (
 				CC88B8E027C6149C00858B11 /* MainViewController.swift */,
 				CC5089F927C64A1800FCB8B5 /* SelectCategoryViewController.swift */,
+				CC508A0827C6BBAB00FCB8B5 /* RullesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				CC508A0027C65B4500FCB8B5 /* CardGameModel.swift in Sources */,
 				CC88B8E127C6149C00858B11 /* MainViewController.swift in Sources */,
 				CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */,
+				CC508A0927C6BBAB00FCB8B5 /* RullesViewController.swift in Sources */,
 				CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */,
 				CC5089FC27C65B1500FCB8B5 /* NetworkManager.swift in Sources */,
 				CC5089FA27C64A1800FCB8B5 /* SelectCategoryViewController.swift in Sources */,
