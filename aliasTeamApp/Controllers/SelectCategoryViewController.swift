@@ -28,6 +28,7 @@ class SelectCategoryViewController: UIViewController {
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.6, blue: 0.4823529412, alpha: 1)
     }
     
+    
 }
 
 // MARK: - Private Methodes
@@ -45,8 +46,12 @@ extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-      
-        print(self.categoryArray[indexPath.row])
+     //   print(self.categoryArray[indexPath.row])
+        // переход на GameViewController и передача свойства
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
+        controller.selectedWord = self.categoryArray[indexPath.row]
+       self.navigationController?.pushViewController(controller, animated: true)
+       
     }
     
 }

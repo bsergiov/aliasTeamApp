@@ -20,6 +20,7 @@
 		CC88B8F727C6161A00858B11 /* DeveloperOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC88B8F627C6161A00858B11 /* DeveloperOne.storyboard */; };
 		CC88B8F927C6163400858B11 /* DeveloperTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC88B8F827C6163400858B11 /* DeveloperTwo.storyboard */; };
 		F8D1EBA127C7D8F700F31B85 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D1EBA027C7D8F700F31B85 /* CategoryCollectionViewCell.swift */; };
+		F8F812ED27C8206300FF8BC5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F812EC27C8206300FF8BC5 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CC88B8F627C6161A00858B11 /* DeveloperOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperOne.storyboard; sourceTree = "<group>"; };
 		CC88B8F827C6163400858B11 /* DeveloperTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperTwo.storyboard; sourceTree = "<group>"; };
 		F8D1EBA027C7D8F700F31B85 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F8F812EC27C8206300FF8BC5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				CC88B8E027C6149C00858B11 /* MainViewController.swift */,
 				CC5089F927C64A1800FCB8B5 /* SelectCategoryViewController.swift */,
 				F8D1EBA027C7D8F700F31B85 /* CategoryCollectionViewCell.swift */,
+				F8F812EC27C8206300FF8BC5 /* GameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				CC508A0027C65B4500FCB8B5 /* CardGameModel.swift in Sources */,
 				CC88B8E127C6149C00858B11 /* MainViewController.swift in Sources */,
 				CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */,
+				F8F812ED27C8206300FF8BC5 /* GameViewController.swift in Sources */,
 				CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */,
 				CC5089FC27C65B1500FCB8B5 /* NetworkManager.swift in Sources */,
 				CC5089FA27C64A1800FCB8B5 /* SelectCategoryViewController.swift in Sources */,
@@ -373,7 +377,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +406,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
