@@ -28,7 +28,6 @@ class SelectCategoryViewController: UIViewController {
 // MARK: - Private Methodes
 extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return self.categoryArray.count
     }
     
@@ -40,7 +39,24 @@ extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
-   
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        print(self.categoryArray[indexPath.row])
+    }
     
 }
+
+extension SelectCategoryViewController: UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        let side = self.collectionView.frame.size.width
+        print(side)
+        return CGSize(width: side, height: 100)
+    }
+ 
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
+        
+        return 35
+    }
+}
+
