@@ -23,6 +23,11 @@ class SelectCategoryViewController: UIViewController {
         self.collectionView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.6, blue: 0.4823529412, alpha: 1)
+    }
+    
 }
 
 // MARK: - Private Methodes
@@ -49,7 +54,6 @@ extension SelectCategoryViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         let side = self.collectionView.frame.size.width
-        print(side)
         return CGSize(width: side, height: 100)
     }
  
