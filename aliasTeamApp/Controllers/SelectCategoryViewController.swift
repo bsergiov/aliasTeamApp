@@ -45,6 +45,7 @@ extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+      
         print(self.categoryArray[indexPath.row])
     }
     
