@@ -34,8 +34,10 @@ extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell else{return UICollectionViewCell()}
         
-        return
+        cell.configure(nameCategory: self.categoryArray[indexPath.row])
+        return cell
     }
     
    
