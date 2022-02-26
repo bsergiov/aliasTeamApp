@@ -73,6 +73,13 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		CC508A3927CA5D3C00FCB8B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CC88B8D027C6149B00858B11 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +142,7 @@
 		CC88B8F327C6156500858B11 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CC508A3927CA5D3C00FCB8B5 /* Extensions */,
 				CC88B8E027C6149C00858B11 /* MainViewController.swift */,
 				CC5089F927C64A1800FCB8B5 /* SelectCategoryViewController.swift */,
 				CC508A0827C6BBAB00FCB8B5 /* RullesViewController.swift */,
