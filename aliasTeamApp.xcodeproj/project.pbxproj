@@ -12,6 +12,7 @@
 		CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */; };
 		CC508A0027C65B4500FCB8B5 /* CardGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FF27C65B4500FCB8B5 /* CardGameModel.swift */; };
 		CC508A0927C6BBAB00FCB8B5 /* RullesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC508A0827C6BBAB00FCB8B5 /* RullesViewController.swift */; };
+		CC508A3827C9920900FCB8B5 /* RullesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC508A3727C9920900FCB8B5 /* RullesModel.swift */; };
 		CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88B8DC27C6149C00858B11 /* AppDelegate.swift */; };
 		CC88B8DF27C6149C00858B11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88B8DE27C6149C00858B11 /* SceneDelegate.swift */; };
 		CC88B8E127C6149C00858B11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88B8E027C6149C00858B11 /* MainViewController.swift */; };
@@ -28,6 +29,7 @@
 		CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		CC5089FF27C65B4500FCB8B5 /* CardGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameModel.swift; sourceTree = "<group>"; };
 		CC508A0827C6BBAB00FCB8B5 /* RullesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RullesViewController.swift; sourceTree = "<group>"; };
+		CC508A3727C9920900FCB8B5 /* RullesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RullesModel.swift; sourceTree = "<group>"; };
 		CC88B8D927C6149C00858B11 /* aliasTeamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aliasTeamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC88B8DC27C6149C00858B11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC88B8DE27C6149C00858B11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */,
 				CC5089FF27C65B4500FCB8B5 /* CardGameModel.swift */,
+				CC508A3727C9920900FCB8B5 /* RullesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC508A3827C9920900FCB8B5 /* RullesModel.swift in Sources */,
 				CC508A0027C65B4500FCB8B5 /* CardGameModel.swift in Sources */,
 				CC88B8E127C6149C00858B11 /* MainViewController.swift in Sources */,
 				CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */,

@@ -9,21 +9,20 @@ import UIKit
 
 class RullesViewController: UIViewController {
 
+    // MARK: - IB Outlets
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    // MARK: - LifeCicle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bodyLabel.text = RullesModel.textBody
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - IB Action
+    @IBAction func closeTapped() {
+        dismiss(animated: true)
     }
-    */
+    
 
 }
