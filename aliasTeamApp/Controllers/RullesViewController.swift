@@ -9,13 +9,20 @@ import UIKit
 
 class RullesViewController: UIViewController {
 
+    // MARK: - IB Outlets
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    // MARK: - LifeCicle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bodyLabel.text = RullesModel.textBody
     }
     
-
-
+    // MARK: - IB Action
+    @IBAction func closeTapped() {
+        dismiss(animated: true)
+    }
+    
 
 }
