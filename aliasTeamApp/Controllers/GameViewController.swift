@@ -22,6 +22,9 @@ class GameViewController: UIViewController {
  
     // MARK: - Public Property
     var selectedWord: String?
+    var timer = Timer()
+    var currentTime = 60
+    var round = 1
     // MARK: - Private Property
     private let radius: CGFloat = 40
 
@@ -33,6 +36,12 @@ class GameViewController: UIViewController {
         self.minusButtonOutlet.layer.cornerRadius = radius * 2
         self.pauseButtonOutlet.layer.cornerRadius = radius / 2
         self.wordLabel.text = self.selectedWord
+        timerLabel.text = "Осталось: 60"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        runTimer()
     }
     
     // MARK: - @IBAction
@@ -44,14 +53,15 @@ class GameViewController: UIViewController {
     @IBAction func buttonPause(_ sender: UIButton) {
         
         if pauseButtonOutlet.titleLabel?.text == "Pause"{
-            
             pauseButtonOutlet.setTitle("Resume", for: .normal)
-        }else{
-            
+            pauseTimer()
+            plusButtonOutlet.isEnabled = false
+            minusButtonOutlet.isEnabled = false
+        } else {
             pauseButtonOutlet.setTitle("Pause", for: .normal)
+            runTimer()
+            plusButtonOutlet.isEnabled = true
+            minusButtonOutlet.isEnabled = true
         }
-        
     }
-    
-    
 }

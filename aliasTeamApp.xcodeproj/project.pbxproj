@@ -10,6 +10,7 @@
 		AFD28FBF27C80BB500F96AD0 /* well.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD28FBE27C80BB500F96AD0 /* well.mp3 */; };
 		AFD28FC127C80BBC00F96AD0 /* skip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD28FC027C80BBC00F96AD0 /* skip.mp3 */; };
 		AFD28FC327C80C2000F96AD0 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD28FC227C80C2000F96AD0 /* timer.mp3 */; };
+		AFD28FD827CB0C1600F96AD0 /* GameViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD28FD727CB0C1600F96AD0 /* GameViewControllerExtensions.swift */; };
 		CC5089FA27C64A1800FCB8B5 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089F927C64A1800FCB8B5 /* SelectCategoryViewController.swift */; };
 		CC5089FC27C65B1500FCB8B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FB27C65B1500FCB8B5 /* NetworkManager.swift */; };
 		CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */; };
@@ -32,6 +33,7 @@
 		AFD28FBE27C80BB500F96AD0 /* well.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = well.mp3; sourceTree = "<group>"; };
 		AFD28FC027C80BBC00F96AD0 /* skip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skip.mp3; sourceTree = "<group>"; };
 		AFD28FC227C80C2000F96AD0 /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
+		AFD28FD727CB0C1600F96AD0 /* GameViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CC5089F927C64A1800FCB8B5 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
 		CC5089FB27C65B1500FCB8B5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		CC508A3927CA5D3C00FCB8B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AFD28FD727CB0C1600F96AD0 /* GameViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */,
 				CC5089FC27C65B1500FCB8B5 /* NetworkManager.swift in Sources */,
 				CC5089FA27C64A1800FCB8B5 /* SelectCategoryViewController.swift in Sources */,
+				AFD28FD827CB0C1600F96AD0 /* GameViewControllerExtensions.swift in Sources */,
 				CC88B8DF27C6149C00858B11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
