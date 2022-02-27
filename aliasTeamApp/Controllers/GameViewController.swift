@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
@@ -22,6 +23,7 @@ class GameViewController: UIViewController {
  
     // MARK: - Public Property
     var selectedWord: String?
+    var player: AVAudioPlayer?
     var timer = Timer()
     var currentTime = 60
     var round = 1

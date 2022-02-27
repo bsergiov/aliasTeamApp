@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFAudio
 
 
 extension GameViewController {
@@ -16,10 +17,11 @@ extension GameViewController {
             self.timerLabel.text = "Осталось: \(self.currentTime)"
             self.currentTime -= Int(timer.timeInterval)
             if self.currentTime == 0 && self.round != 4 {
-//                self.playTimerSound()
+                self.playTimerSound()
                 self.presentRoundAlert()
                 timer.invalidate()
             } else if self.round == 4 && self.currentTime == 0 {
+                self.playTimerSound()
                 self.presentFinishAlert()
                 timer.invalidate()
             }
@@ -52,5 +54,16 @@ extension GameViewController {
         }
         finishAlert.addAction(exitGame)
         present(finishAlert, animated: true, completion: nil)
+    }
+    
+    func playTimerSound() {
+        guard let url = Bundle.main.url(forResource: "timer", withExtension: "mp3") else { return }
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch {
+            print(error)
+        }
+        
     }
 }
