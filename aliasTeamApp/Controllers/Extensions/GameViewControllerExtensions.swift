@@ -14,7 +14,7 @@ extension GameViewController {
     
     func runTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(1), repeats: true, block: { timer in
-            self.timerLabel.text = "Осталось: \(self.currentTime)"
+            self.timerLabel.text = "Time: \(self.currentTime)"
             self.currentTime -= Int(timer.timeInterval)
             if self.currentTime == 0 && self.round != 4 {
                 self.playTimerSound()
@@ -33,13 +33,13 @@ extension GameViewController {
     }
     
     func presentRoundAlert() {
-        let roundAlert = UIAlertController(title: "Раунд завершен!", message: "Текущий счет: \(scoreLabel.text!)", preferredStyle: .alert)
-        let nextRound = UIAlertAction(title: "Следующий раунд", style: .default) { _ in
+        let roundAlert = UIAlertController(title: "Round \(round) completed!", message: "Current account: \(score)", preferredStyle: .alert)
+        let nextRound = UIAlertAction(title: "Next round", style: .default) { _ in
             self.currentTime = 60
             self.round += 1
             self.runTimer()
         }
-        let finish = UIAlertAction(title: "Закончить игру", style: .cancel) { _ in
+        let finish = UIAlertAction(title: "Finish the game", style: .cancel) { _ in
             self.navigationController?.popViewController(animated: true)
         }
         roundAlert.addAction(nextRound)
@@ -48,8 +48,8 @@ extension GameViewController {
     }
     
     func presentFinishAlert() {
-        let finishAlert = UIAlertController(title: "Игра завершена!", message: "Текущий счет: \(scoreLabel.text!)", preferredStyle: .alert)
-        let exitGame = UIAlertAction(title: "Выйти из игры", style: .cancel) { _ in
+        let finishAlert = UIAlertController(title: "Game over!", message: "Current account: \(score)", preferredStyle: .alert)
+        let exitGame = UIAlertAction(title: "Quit the game", style: .cancel) { _ in
             self.navigationController?.popViewController(animated: true)
         }
         finishAlert.addAction(exitGame)
@@ -64,6 +64,5 @@ extension GameViewController {
         } catch {
             print(error)
         }
-        
     }
 }
