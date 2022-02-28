@@ -36,15 +36,19 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.plusButtonOutlet.layer.cornerRadius = radius
-        self.minusButtonOutlet.layer.cornerRadius = radius
-        self.pauseButtonOutlet.layer.cornerRadius = pauseButtonOutlet.frame.height / 2
-        pauseButtonOutlet.setTitle("", for: .normal)
+       
+        
         setupCard()
         gameCard = startGetCard()
         wordLabel.text = gameCard?.cardWord
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.plusButtonOutlet.layer.cornerRadius = plusButtonOutlet.frame.width / 2
+        self.minusButtonOutlet.layer.cornerRadius = minusButtonOutlet.frame.width / 2
+        self.pauseButtonOutlet.layer.cornerRadius = pauseButtonOutlet.frame.width / 2
+    }
  
     // MARK: - @IBAction
 
