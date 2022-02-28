@@ -24,6 +24,7 @@
 		CC88B8E927C6149E00858B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC88B8E727C6149E00858B11 /* LaunchScreen.storyboard */; };
 		CC88B8F727C6161A00858B11 /* DeveloperOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC88B8F627C6161A00858B11 /* DeveloperOne.storyboard */; };
 		CC88B8F927C6163400858B11 /* DeveloperTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC88B8F827C6163400858B11 /* DeveloperTwo.storyboard */; };
+		F88EA7B227CD10730012B387 /* ExtensionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88EA7B127CD10730012B387 /* ExtensionGameViewController.swift */; };
 		F8D1EBA127C7D8F700F31B85 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D1EBA027C7D8F700F31B85 /* CategoryCollectionViewCell.swift */; };
 		F8F812ED27C8206300FF8BC5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F812EC27C8206300FF8BC5 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		CC88B8EA27C6149E00858B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC88B8F627C6161A00858B11 /* DeveloperOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperOne.storyboard; sourceTree = "<group>"; };
 		CC88B8F827C6163400858B11 /* DeveloperTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperTwo.storyboard; sourceTree = "<group>"; };
+		F88EA7B127CD10730012B387 /* ExtensionGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionGameViewController.swift; sourceTree = "<group>"; };
 		F8D1EBA027C7D8F700F31B85 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8F812EC27C8206300FF8BC5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 		CC508A3927CA5D3C00FCB8B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F88EA7B127CD10730012B387 /* ExtensionGameViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */,
 				CC5089FC27C65B1500FCB8B5 /* NetworkManager.swift in Sources */,
 				CC5089FA27C64A1800FCB8B5 /* SelectCategoryViewController.swift in Sources */,
+				F88EA7B227CD10730012B387 /* ExtensionGameViewController.swift in Sources */,
 				CC88B8DF27C6149C00858B11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
