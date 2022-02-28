@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
     var selectedWord: String?
     var player: AVAudioPlayer?
     var timer = Timer()
+    var networkManager = NetworkManager()
+    var currentJoke = ""
     var currentTime = 60
     var round = 1
     var score = 0
@@ -40,6 +42,7 @@ class GameViewController: UIViewController {
         self.pauseButtonOutlet.layer.cornerRadius = radius / 2
         self.wordLabel.text = self.selectedWord
         timerLabel.text = "Time: 60"
+        networkManager.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {

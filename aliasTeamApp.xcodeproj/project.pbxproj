@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4FEEFC27CD619B00D0DC38 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4FEEFB27CD619B00D0DC38 /* JokesModel.swift */; };
 		AFD28FBF27C80BB500F96AD0 /* well.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD28FBE27C80BB500F96AD0 /* well.mp3 */; };
 		AFD28FC127C80BBC00F96AD0 /* skip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD28FC027C80BBC00F96AD0 /* skip.mp3 */; };
 		AFD28FC327C80C2000F96AD0 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD28FC227C80C2000F96AD0 /* timer.mp3 */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF4FEEFB27CD619B00D0DC38 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		AFD28FBE27C80BB500F96AD0 /* well.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = well.mp3; sourceTree = "<group>"; };
 		AFD28FC027C80BBC00F96AD0 /* skip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skip.mp3; sourceTree = "<group>"; };
 		AFD28FC227C80C2000F96AD0 /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				CC5089FD27C65B3600FCB8B5 /* CategoryModel.swift */,
 				CC5089FF27C65B4500FCB8B5 /* CardGameModel.swift */,
 				CC508A3727C9920900FCB8B5 /* RullesModel.swift */,
+				AF4FEEFB27CD619B00D0DC38 /* JokesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				CC508A0027C65B4500FCB8B5 /* CardGameModel.swift in Sources */,
 				CC88B8E127C6149C00858B11 /* MainViewController.swift in Sources */,
 				CC5089FE27C65B3600FCB8B5 /* CategoryModel.swift in Sources */,
+				AF4FEEFC27CD619B00D0DC38 /* JokesModel.swift in Sources */,
 				F8F812ED27C8206300FF8BC5 /* GameViewController.swift in Sources */,
 				CC508A0927C6BBAB00FCB8B5 /* RullesViewController.swift in Sources */,
 				CC88B8DD27C6149C00858B11 /* AppDelegate.swift in Sources */,

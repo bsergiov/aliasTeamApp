@@ -10,9 +10,14 @@ import UIKit
 import AVFAudio
 
 
-extension GameViewController {
+extension GameViewController: NetworkManagerDelegate {
+    
+    func didUpdateJoke(with model: JokesModel) {
+        self.currentJoke = model.joke!
+    }
     
     func runTimer() {
+        networkManager.performRequest()
         timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(1), repeats: true, block: { timer in
             self.timerLabel.text = "Time: \(self.currentTime)"
             self.currentTime -= Int(timer.timeInterval)
@@ -33,7 +38,7 @@ extension GameViewController {
     }
     
     func presentRoundAlert() {
-        let roundAlert = UIAlertController(title: "Round \(round) completed!", message: "Current account: \(score)", preferredStyle: .alert)
+        let roundAlert = UIAlertController(title: "Round \(round) completed!", message: "Current account: \(score)\n\(currentJoke)", preferredStyle: .alert)
         let nextRound = UIAlertAction(title: "Next round", style: .default) { _ in
             self.currentTime = 60
             self.round += 1
