@@ -9,6 +9,7 @@ import Foundation
 
 extension GameViewController{
     
+
     func checkAnswer(senderBool: Bool, scoreGame: Int, gameCard: Int) -> Int {
         var tempScore = scoreGame
         
@@ -40,6 +41,10 @@ extension GameViewController{
 
         return (gameArray?.removeFirst())!
     }
+    
+    
+    
+   
     
     
 }

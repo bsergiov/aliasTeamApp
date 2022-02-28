@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
@@ -20,17 +21,17 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
  
     // MARK: - Public Property
-    var categotyModels: CategoryModel?
     
+    var categotyModels: CategoryModel?
     var gameArray: [CardGameModel]?
     var gameCard: CardGameModel?
     var cardGameModelArray: [CardGameModel]?
-    var score = 0
     
     // MARK: - Private Property
+    private var player: AVAudioPlayer?
     private let radius: CGFloat = 40
+    private var score = 0
     
-
     // MARK: - Life Cicle
 
     override func viewDidLoad() {
@@ -54,11 +55,13 @@ class GameViewController: UIViewController {
 
         if sender.titleLabel?.text == "+"{
             tempScore = checkAnswer(senderBool: true, scoreGame: score, gameCard: gameCard!.point)
+            playSound(nameFile: "well")
         }else{
             tempScore = checkAnswer(senderBool: false, scoreGame: score, gameCard: gameCard!.point)
+            playSound(nameFile: "skip")
+
         }
         score = tempScore
-        
         scoreLabel.text = "Score: \(score)"
         gameCard = startGetCard()
         wordLabel.text = gameCard?.cardWord
@@ -76,6 +79,16 @@ class GameViewController: UIViewController {
         }
         
     }
-    
+   
+    // MARK: - Func()
+
+
+    func playSound(nameFile: String) {
+     
+        let url = Bundle.main.url(forResource: nameFile, withExtension: "mp3")
+               player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
+
+    }
     
 }
