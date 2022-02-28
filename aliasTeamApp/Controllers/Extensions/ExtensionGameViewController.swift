@@ -37,9 +37,8 @@ extension GameViewController{
         if gameArray!.count < 1{
             setupCard()
         }
-        _ = gameArray?.shuffled()
-
-        return (gameArray?.removeFirst())!
+        var tempArray = gameArray?.shuffled()
+        return (tempArray?.removeFirst())!
     }
     
     
