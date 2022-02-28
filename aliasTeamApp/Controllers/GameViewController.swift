@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
  
     // MARK: - Public Property
-    var selectedWord: String?
+    var categotyModels: CategoryModel?
     // MARK: - Private Property
     private let radius: CGFloat = 40
 
@@ -32,7 +32,8 @@ class GameViewController: UIViewController {
         self.plusButtonOutlet.layer.cornerRadius = radius * 2
         self.minusButtonOutlet.layer.cornerRadius = radius * 2
         self.pauseButtonOutlet.layer.cornerRadius = radius / 2
-        self.wordLabel.text = self.selectedWord
+        
+       // self.wordLabel.text = self.selectedWord
     }
     
     // MARK: - @IBAction
