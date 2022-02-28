@@ -33,14 +33,12 @@ extension GameViewController{
     
 
     func startGetCard() -> CardGameModel{
-        _ = gameArray?.shuffled()
-        guard let checkGameArray = gameArray?.removeFirst() else{
+        if gameArray!.count < 1{
             setupCard()
-            return gameArray?.first ?? CardGameModel(cardWord: "", categoryName: "", point: 0)}
+        }
+        _ = gameArray?.shuffled()
 
-        return checkGameArray
-        
-        
+        return (gameArray?.removeFirst())!
     }
     
     
