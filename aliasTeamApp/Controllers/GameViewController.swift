@@ -29,17 +29,17 @@ class GameViewController: UIViewController {
     
     // MARK: - Private Property
     private var player: AVAudioPlayer?
-    private let radius: CGFloat = 40
+    private let radius: CGFloat = 80
     private var score = 0
-    
+    private var checkPlayPauseButton = true
     // MARK: - Life Cicle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.plusButtonOutlet.layer.cornerRadius = radius * 2
-        self.minusButtonOutlet.layer.cornerRadius = radius * 2
-        self.pauseButtonOutlet.layer.cornerRadius = radius / 2
-        
+        self.plusButtonOutlet.layer.cornerRadius = radius
+        self.minusButtonOutlet.layer.cornerRadius = radius
+        self.pauseButtonOutlet.layer.cornerRadius = pauseButtonOutlet.frame.height / 2
+        pauseButtonOutlet.setTitle("", for: .normal)
         setupCard()
         gameCard = startGetCard()
         wordLabel.text = gameCard?.cardWord
@@ -70,12 +70,18 @@ class GameViewController: UIViewController {
     
     @IBAction func buttonPause(_ sender: UIButton) {
         
-        if pauseButtonOutlet.titleLabel?.text == "Pause"{
+        if checkPlayPauseButton{
             
-            pauseButtonOutlet.setTitle("Resume", for: .normal)
+           let play =  UIImage.init(systemName: "play.fill")
+            
+            pauseButtonOutlet.setImage(play, for: .normal)
+           // pauseButtonOutlet.setTitle("Resume", for: .normal)
+            checkPlayPauseButton = false
         }else{
-            
-            pauseButtonOutlet.setTitle("Pause", for: .normal)
+            let pause =  UIImage.init(systemName: "pause.fill")
+             pauseButtonOutlet.setImage(pause, for: .normal)
+            checkPlayPauseButton = true
+
         }
         
     }
