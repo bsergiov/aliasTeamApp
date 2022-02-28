@@ -16,14 +16,19 @@ class GameViewController: UIViewController {
     @IBOutlet weak var plusButtonOutlet: UIButton!
     @IBOutlet weak var minusButtonOutlet: UIButton!
     @IBOutlet weak var imageViewOutlet: UIImageView!
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
  
     // MARK: - Public Property
     var categotyModels: CategoryModel?
+    
+    var gameArray: [CardGameModel]?
+    var gameCard: CardGameModel?
+    var cardGameModelArray: [CardGameModel]?
+
     // MARK: - Private Property
     private let radius: CGFloat = 40
+    
 
     // MARK: - Life Cicle
 
@@ -33,14 +38,26 @@ class GameViewController: UIViewController {
         self.minusButtonOutlet.layer.cornerRadius = radius * 2
         self.pauseButtonOutlet.layer.cornerRadius = radius / 2
         
-       // self.wordLabel.text = self.selectedWord
+        setupCard()
+        gameCard = startGetCard()
+        
+        wordLabel.text = gameCard?.cardWord
     }
     
+ 
     // MARK: - @IBAction
 
 
     @IBAction func buttonSelectAnswer(_ sender: UIButton) {
+        
+        
+        if sender.titleLabel?.text == "+"{
+            print("+")
+        }else{
+            print("-")
+        }
     }
+    
     
     @IBAction func buttonPause(_ sender: UIButton) {
         
