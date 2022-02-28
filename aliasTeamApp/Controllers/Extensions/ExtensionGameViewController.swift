@@ -9,22 +9,23 @@ import Foundation
 
 extension GameViewController{
     
-    func checkAnswer(senderBool: Bool){
+    func checkAnswer(senderBool: Bool, scoreGame: Int, gameCard: Int) -> Int {
+        var tempScore = scoreGame
         
         if senderBool{
-            
+          tempScore += gameCard
         }else{
-            
+            tempScore -= gameCard
+            if tempScore < 1{
+                tempScore = 0
+            }
         }
-        
-       
+    
+       return tempScore
         
     }
     
-    
-    
-    
-    
+
     func setupCard(){
         cardGameModelArray = CardGameModel.getCardsGame(with: categotyModels?.name ?? "")
         gameArray = cardGameModelArray
@@ -33,9 +34,10 @@ extension GameViewController{
 
     func startGetCard() -> CardGameModel{
         _ = gameArray?.shuffled()
-        
-        guard let checkGameArray = gameArray?.removeFirst() else{ return CardGameModel(cardWord: "", categoryName: "", point: 0)}
-        
+        guard let checkGameArray = gameArray?.removeFirst() else{
+            setupCard()
+            return gameArray?.first ?? CardGameModel(cardWord: "", categoryName: "", point: 0)}
+
         return checkGameArray
         
         

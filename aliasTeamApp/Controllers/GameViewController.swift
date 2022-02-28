@@ -25,7 +25,8 @@ class GameViewController: UIViewController {
     var gameArray: [CardGameModel]?
     var gameCard: CardGameModel?
     var cardGameModelArray: [CardGameModel]?
-
+    var score = 0
+    
     // MARK: - Private Property
     private let radius: CGFloat = 40
     
@@ -40,7 +41,6 @@ class GameViewController: UIViewController {
         
         setupCard()
         gameCard = startGetCard()
-        
         wordLabel.text = gameCard?.cardWord
     }
     
@@ -49,13 +49,19 @@ class GameViewController: UIViewController {
 
 
     @IBAction func buttonSelectAnswer(_ sender: UIButton) {
-        
-        
+      
+        var tempScore = score
+
         if sender.titleLabel?.text == "+"{
-            print("+")
+            tempScore = checkAnswer(senderBool: true, scoreGame: score, gameCard: gameCard!.point)
         }else{
-            print("-")
+            tempScore = checkAnswer(senderBool: false, scoreGame: score, gameCard: gameCard!.point)
         }
+        score = tempScore
+        
+        scoreLabel.text = "Score: \(score)"
+        gameCard = startGetCard()
+        wordLabel.text = gameCard?.cardWord
     }
     
     
