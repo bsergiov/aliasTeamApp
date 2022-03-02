@@ -15,12 +15,14 @@ class SelectCategoryViewController: UIViewController {
     // MARK: - Public Property
     
     // MARK: - Private Property
-    private let categoryArray:[String] = ["item1","item2","item3","item4"]
+    private var categoryArray:[CategoryModel] = []
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        categoryArray = CategoryModel.getCategorys()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +43,7 @@ extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell else{return UICollectionViewCell()}
         
-        cell.configure(nameCategory: self.categoryArray[indexPath.row])
+        cell.configure(nameCategory: self.categoryArray[indexPath.row].name)
         return cell
     }
     
@@ -49,7 +51,7 @@ extension SelectCategoryViewController: UICollectionViewDelegate, UICollectionVi
      //   print(self.categoryArray[indexPath.row])
         // переход на GameViewController и передача свойства
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
-        controller.selectedWord = self.categoryArray[indexPath.row]
+        controller.categotyModels = self.categoryArray[indexPath.row]
        self.navigationController?.pushViewController(controller, animated: true)
        
     }
