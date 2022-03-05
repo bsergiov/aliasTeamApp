@@ -76,8 +76,6 @@ class GameViewController: UIViewController {
     }
  
     // MARK: - @IBAction
-    
-    
     @IBAction func buttonSelectAnswer(_ sender: UIButton) {
       
         var tempScore = score
