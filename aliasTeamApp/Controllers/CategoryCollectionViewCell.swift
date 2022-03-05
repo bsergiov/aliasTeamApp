@@ -19,4 +19,5 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         self.categoryLabel.textColor = .white
         self.cellView.layer.cornerRadius = 20
     }
+    
 }
