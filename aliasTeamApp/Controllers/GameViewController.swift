@@ -12,18 +12,32 @@ class GameViewController: UIViewController {
     
     // MARK: - IB Outlets
     
-    @IBOutlet weak var wordLabel: UILabel!
-    @IBOutlet weak var pauseButtonOutlet: UIButton!
-    @IBOutlet weak var plusButtonOutlet: UIButton!
-    @IBOutlet weak var minusButtonOutlet: UIButton!
+    @IBOutlet weak var pauseButtonOutlet: UIButton! {
+        didSet{
+            pauseButtonOutlet.layer.cornerRadius = pauseButtonOutlet.frame.height / 2
+        }
+    }
+    @IBOutlet weak var plusButtonOutlet: UIButton! {
+        didSet {
+            plusButtonOutlet.layer.cornerRadius = plusButtonOutlet.frame.height / 2
+        }
+    }
+    @IBOutlet weak var minusButtonOutlet: UIButton! {
+        didSet {
+            minusButtonOutlet.layer.cornerRadius = minusButtonOutlet.frame.height / 2
+        }
+    }
+    
     @IBOutlet weak var imageViewOutlet: UIImageView!
+    @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var currentRaundLabel: UILabel!
     
     // MARK: - Public Property
     var selectedWord: String?
-    var player: AVAudioPlayer?
     var timer = Timer()
+    var player: AVAudioPlayer?
     var networkManager = NetworkManager()
     var currentJoke = ""
     var currentTime = 60
@@ -36,25 +50,17 @@ class GameViewController: UIViewController {
     var cardGameModelArray: [CardGameModel]?
     
     // MARK: - Private Property
-//    private var player: AVAudioPlayer?
     private let radius: CGFloat = 80
-//    private var score = 0
     private var checkPlayPauseButton = true
-    // MARK: - Life Cicle
     
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkManager.delegate = self
        
-        
         setupCard()
         gameCard = startGetCard()
-        wordLabel.text = gameCard?.cardWord
-        self.plusButtonOutlet.layer.cornerRadius = radius * 2
-        self.minusButtonOutlet.layer.cornerRadius = radius * 2
-        self.pauseButtonOutlet.layer.cornerRadius = radius / 2
-        self.wordLabel.text = self.selectedWord
-        timerLabel.text = "Time: 60"
-        networkManager.delegate = self
+        setupStartScreenGame()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,30 +99,52 @@ class GameViewController: UIViewController {
     
     @IBAction func buttonPause(_ sender: UIButton) {
         
-        if checkPlayPauseButton{
-            
-           let play =  UIImage.init(systemName: "play.fill")
-            
-            pauseButtonOutlet.setImage(play, for: .normal)
-           // pauseButtonOutlet.setTitle("Resume", for: .normal)
-            checkPlayPauseButton = false
-        }else{
-            let pause =  UIImage.init(systemName: "pause.fill")
-             pauseButtonOutlet.setImage(pause, for: .normal)
-            checkPlayPauseButton = true
-
-        }
+        let image = UIImage(
+            systemName: checkPlayPauseButton
+            ? "play.fill"
+            : "pause.fill"
+        )
+        pauseButtonOutlet.setImage(image, for: .normal)
+        checkPlayPauseButton.toggle()
+        
+        controlPauseGame()
     }
-   
-    // MARK: - Func()
+}
 
-
-    func playSound(nameFile: String) {
-     
+// MARK: - Private Methodes
+extension GameViewController {
+    
+    private func setupStartScreenGame() {
+        wordLabel.text = selectedWord
+        timerLabel.text = "Time: 60"
+        scoreLabel.text = "Score: \(score)"
+        currentRaundLabel.text = "Round: \(round)"
+        wordLabel.text = gameCard?.cardWord
+        
+    }
+    
+    private func playSound(nameFile: String) {
         let url = Bundle.main.url(forResource: nameFile, withExtension: "mp3")
                player = try! AVAudioPlayer(contentsOf: url!)
         player!.play()
-
     }
     
+    private func controlPauseGame() {
+        
+        plusButtonOutlet.isEnabled.toggle()
+        minusButtonOutlet.isEnabled.toggle()
+        checkPlayPauseButton ? runTimer() : pauseTimer()
+//
+//        if checkPlayPauseButton {
+////            pauseButtonOutlet.setTitle("Resume", for: .normal)
+//            pauseTimer()
+//            plusButtonOutlet.isEnabled = false
+//            minusButtonOutlet.isEnabled = false
+//        } else {
+////            pauseButtonOutlet.setTitle("Pause", for: .normal)
+//            runTimer()
+//            plusButtonOutlet.isEnabled = true
+//            minusButtonOutlet.isEnabled = true
+//        }
+    }
 }
