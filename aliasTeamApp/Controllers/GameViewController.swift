@@ -36,9 +36,9 @@ class GameViewController: UIViewController {
     var cardGameModelArray: [CardGameModel]?
     
     // MARK: - Private Property
-    private var player: AVAudioPlayer?
+//    private var player: AVAudioPlayer?
     private let radius: CGFloat = 80
-    private var score = 0
+//    private var score = 0
     private var checkPlayPauseButton = true
     // MARK: - Life Cicle
     
